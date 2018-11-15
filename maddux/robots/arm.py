@@ -276,6 +276,7 @@ class Arm:
             delta_q = np.squeeze(np.asarray(delta_q))
             q = q + (alpha * delta_q.flatten())
             self.qs = np.vstack((self.qs, q.copy()))
+            
 
             if abs(np.linalg.norm(err)) <= 1e-6:
                 return q
